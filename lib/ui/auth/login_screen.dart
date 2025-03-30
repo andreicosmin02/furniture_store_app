@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import the homepage from home.dart
-import 'home.dart';
+import '../products/products_screen.dart';
 
 // Create LoginPage class - stateful widget
 class LoginPage extends StatefulWidget {
@@ -45,11 +45,9 @@ class _LoginPageState extends State<LoginPage> {  // Creating variables
       );
 
       // Navigate to home screen after login
-      Navigator.pushReplacement(
+      Navigator.pushReplacementNamed(
         context,
-        MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
-        ),
+        '/products',
       );
     }
   }
