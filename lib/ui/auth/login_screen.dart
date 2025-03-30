@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 // Create LoginPage class - stateful widget
@@ -5,11 +7,11 @@ class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  LoginPageState createState() => LoginPageState();
 }
 
 // Create LoginPageState class - state
-class _LoginPageState extends State<LoginPage> {  // Creating variables
+class LoginPageState extends State<LoginPage> {  // Creating variables
   final _formKey = GlobalKey<FormState>(); // Form key is used for form validation, it is a unique identifier for the form. If we don't use it then we can't validate the form.
 
 
@@ -33,8 +35,8 @@ class _LoginPageState extends State<LoginPage> {  // Creating variables
       final password = _passwordController.text;
 
       // For demonstration: print credential and show success
-      print('Email: $email');
-      print('Password: $password');
+      log('Email: $email' as num);
+      log('Password: $password' as num);
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Login Successful'),
