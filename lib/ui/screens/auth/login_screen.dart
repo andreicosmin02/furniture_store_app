@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
@@ -35,8 +35,8 @@ class LoginPageState extends State<LoginPage> {  // Creating variables
       final password = _passwordController.text;
 
       // For demonstration: print credential and show success
-      log('Email: $email' as num);
-      log('Password: $password' as num);
+      log('Email: $email');
+      log('Password: $password');
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Login Successful'),
