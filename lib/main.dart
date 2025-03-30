@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_store_app/core/app_router.dart';
+import 'package:furniture_store_app/core/routes/app_router.dart';
 
 void main() {
   runApp(const MyApp());

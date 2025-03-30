@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_store_app/ui/auth/login_screen.dart';
-import 'package:furniture_store_app/ui/products/products_screen.dart';
+import 'package:furniture_store_app/ui/screens/auth/login_screen.dart';
+import 'package:furniture_store_app/ui/screens/products/products_screen.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {

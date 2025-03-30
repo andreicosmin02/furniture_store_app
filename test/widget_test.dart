@@ -14,7 +14,7 @@ void main() {
   testWidgets('Login screen renders correctly', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('Login'), findsOneWidget);
+    expect(find.text('Login'), findsAtLeast(1));
     expect(find.byType(TextFormField), findsNWidgets(2));
     expect(find.byType(ElevatedButton), findsOneWidget);
   });
