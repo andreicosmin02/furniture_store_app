@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import the homepage from home.dart
-import '../products/products_screen.dart';
 
 // Create LoginPage class - stateful widget
 class LoginPage extends StatefulWidget {
