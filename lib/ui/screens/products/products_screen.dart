@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_store_app/data/mock_products.dart';
+import 'package:furniture_store_app/state/basket_provider.dart';
 import 'package:furniture_store_app/ui/widgets/product_card.dart';
+import 'package:provider/provider.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key});
@@ -13,12 +15,10 @@ class ProductsScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Badge(
-              label: const Text('0'), // TODO: Connect to basket
+              label: Text('${context.watch<BasketProvider>().itemCount}'),
               child: const Icon(Icons.shopping_cart)
             ),
-            onPressed: () {
-              // TODO: Navigate to basket
-            },
+            onPressed: () => Navigator.pushNamed(context, '/basket'),
           ),
         ],
       ),

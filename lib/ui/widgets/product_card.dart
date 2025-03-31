@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_store_app/data/models/product.dart';
+import 'package:furniture_store_app/state/basket_provider.dart';
+import 'package:provider/provider.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -56,9 +58,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   ElevatedButton.icon(
-                    onPressed: () {
-                      // TODO: Add to basket
-                    },
+                    onPressed: () => context.read<BasketProvider>().addItem(product),
                     icon: const Icon(Icons.add_shopping_cart),
                     label: const Text('Add to Cart'),
                     style: ElevatedButton.styleFrom(
